@@ -1,1 +1,6 @@
 rootProject.name = 'grpc-bet'
+include 'proto'
+include 'user-service'
+include 'bet-service'
+include 'aggregator-service'
+

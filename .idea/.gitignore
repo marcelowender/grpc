@@ -1,8 +1,11 @@
-# Default ignored files
-/shelf/
-/workspace.xml
-# Datasource local storage ignored files
-/dataSources/
-/dataSources.local.xml
-# Editor-based HTTP Client requests
-/httpRequests/
+/classes
+**/build.env.properties
+/build
+/.gradle
+/.idea/
+*.iml
+/out
+*.tgz
+.*.swp
+*.log
+.DS_Store
