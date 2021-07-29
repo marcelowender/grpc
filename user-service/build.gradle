@@ -6,6 +6,10 @@ plugins {
 group 'br.com.marcelo'
 version '0.0.1-SNAPSHOT'
 
+springBoot {
+    mainClassName = 'br.com.marcelo.GrpcBetApplication'
+}
+
 repositories {
     mavenCentral()
 }
