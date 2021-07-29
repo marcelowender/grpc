@@ -1,13 +1,13 @@
-package br.com.marcelo.grpcbet;
+package br.com.marcelo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class GrpcBetApplication {
+public class UserApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(GrpcBetApplication.class, args);
+		SpringApplication.run(UserApplication.class, args);
 	}
 
 }
