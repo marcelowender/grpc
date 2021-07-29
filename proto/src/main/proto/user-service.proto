@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+import "common/common.proto";
+
+option java_multiple_files = true;
+option java_package = "br.com.marcelo.user";
+
+message UserSearchRequest{
+  string login_id = 1;
+}
+
+message UserResponse{
+  string long_id = 1;
+  string name = 2;
+  common.BetType bet_type = 3;
+
+}
+
+message UserBetTypeUpdateRequest{
+  string login_id = 1;
+  common.BetType bet_type = 2 ;
+}
+
+
+
+service UserService{
+
+  rpc getUser(UserSearchRequest) returns (UserResponse);
+
+  rpc updateUserBetType(UserBetTypeUpdateRequest) returns (UserResponse);
+
+
+}

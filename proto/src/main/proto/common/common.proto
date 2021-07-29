@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package common;
+
+option java_multiple_files = true;
+option java_package = "br.com.marcelo.common";
+
+enum BetType{
+  SOCCER = 0;
+  FIGHT = 1;
+  GAMES = 2;
+}

@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+import "common/common.proto";
+
+option java_multiple_files = true;
+option java_package = "br.com.marcelo.bet";
+
+
+message BetDto{
+  string title = 1;
+  double value = 2;
+}
+
+message BetSearchRequest{
+  common.BetType type = 1;
+}
+
+message BetSearchResponse{
+  repeated BetDto bets = 1;
+}
+
+service BetService{
+
+  rpc getBets(BetSearchRequest) returns (BetSearchResponse);
+
+}
