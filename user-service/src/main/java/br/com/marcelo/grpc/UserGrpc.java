@@ -31,6 +31,16 @@ public class UserGrpc extends UserServiceGrpc.UserServiceImplBase {
 
     @Override
     public void updateUserBetType(UserBetTypeUpdateRequest request, StreamObserver<UserResponse> responseObserver) {
-        super.updateUserBetType(request, responseObserver);
+        UserResponse.Builder builder = UserResponse.newBuilder();
+        repository.findById(request.getLoginId())
+                .ifPresent(user -> {
+                    user.setBetType(request.getBetType().toString());
+                    builder.setName(user.getName())
+                            .setLongId(user.getLogin())
+                            .setBetType(BetType.valueOf(user.getBetType()));
+                });
+
+        responseObserver.onNext(builder.build());
+        responseObserver.onCompleted();
     }
 }
