@@ -10,3 +10,4 @@
 *.log
 .DS_Store
 /.idea/
+gradle/wrapper/gradle-wrapper.jar
